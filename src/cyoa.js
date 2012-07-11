@@ -56,6 +56,7 @@
                 }
                 that.add_to_path(that.start_page);
                 that.display_page(that.start_page);
+                return that;
             },
             create_cover : function() {
                 container_elem = $('#' + that.container);
@@ -138,6 +139,7 @@
                 //maybe fancy this up inna bit, have it slide or somethign
                 $('.cyoa_page').hide();
                 $('#' + page + '_container').show();
+                return that;
             },
             back : function() {
                 if ( path.length === 1 ) {

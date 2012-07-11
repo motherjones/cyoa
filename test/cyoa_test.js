@@ -27,10 +27,15 @@
     }
   });
 
-  /*FIXME tests go here, they look like this one, except they actually test cyoa
-  test('is chainable', 1, function() {
-    // Not a bad test to run on collection methods.
-    strictEqual(this.elems.awesome(), this.elems, 'should be chaninable');
+  test('returns cyoa object', 1, function() {
+      equal(typeof(new $.Cyoa()), 'object');
   });
-  */
+
+  test('checks start page can be set w/ option argument', 1, function() {
+      equal(new $.Cyoa({}, {'start_page': 'test'}).start_page, 'test');
+  });
+
+  test('checks containing element can be set w/ option argument', 1, function() {
+      equal(new $.Cyoa({}, {'container': 'test'}).container, 'test');
+  });
 }(jQuery));
