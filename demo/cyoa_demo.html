@@ -1,0 +1,92 @@
+<html>
+<head>
+ <script src="../libs/jquery/jquery.js"></script>
+ <link href="../css/cyoa.css" rel="stylesheet" />
+ <script src="../src/cyoa.js"></script>      
+ <script type="text/javascript">
+jQuery(document).ready(function() {
+var cyoa = jQuery.Cyoa({
+start : { // default start page, if you want to call it something different, you have to set it in the options
+html: '<p class="flow-question">Do you ever have sex, for like, non-procreative reasons?</p><img src="http://assets.motherjones.com/politics/2012/03/slut_flowchart_assets/TiltedHeadKitty.jpg"/>',
+connects: {
+'quit_telling' : 'No',
+'viagra' : 'Yes'
+}
+},
+quit_telling : {
+html: '<p class="flow-question">Whoa. Quit telling everyone about your sex life! Are you a dude?</p><img src="http://assets.motherjones.com/politics/2012/03/slut_flowchart_assets/BucketKitty.jpg"/>',
+connects: {
+'rock_on' : 'Yes',
+'medical' : 'No'
+}
+},
+viagra : {
+html: '<p class="flow-question">Do you take Viagra?</p><img src="http://assets.motherjones.com/politics/2012/03/slut_flowchart_assets/BobDoleDog.jpg"/>',
+connects: {
+'earlier' : 'No',
+'flying_high' : 'Yes'
+}
+},
+earlier : {
+html: '<p class="flow-question">Um. Maybe we should have asked earlier: Are you a female?</p><img src="http://assets.motherjones.com/politics/2012/03/slut_flowchart_assets/SlippingKitty.jpg"/>',
+connects: {
+'rock_on' : 'No',
+'slut' : 'Yes'
+}
+},
+rock_on : {
+html: '<p class="flow-question">Of course you\'re not a slut; you\'re a dude! Rock on, bro!</p><img src="http://assets.motherjones.com/politics/2012/03/slut_flowchart_assets/HighFive.jpg"/>'
+},
+rock_on1 : {
+html: '<p class="flow-question">Of course you\'re not a slut; you\'re a dude! Rock on, bro!</p><img src="http://assets.motherjones.com/politics/2012/03/slut_flowchart_assets/HighFive.jpg"/>'
+},
+slut : {
+html: '<p class="flow-question">You\'re a slut. Sorry, we don\'t make the rules. The plaque is in the mail.</p><img src="http://assets.motherjones.com/politics/2012/03/slut_flowchart_assets/champagne-short.png"/>'
+},
+flying_high : {
+html: '<p class="flow-question">Have you ever tried bringing 29 100-mg Viagra pills with you to the Dominican Republican?</p><img src="http://assets.motherjones.com/politics/2012/03/slut_flowchart_assets/rush-short.png"/>',
+connects: {
+'really' : 'Yes',
+'rock_on' : 'No'
+}
+},
+really : {
+html: '<p class="flow-question">Wait, really?</p><img src="http://assets.motherjones.com/politics/2012/03/slut_flowchart_assets/kitty-short.png"/>',
+connects: {
+'rock_on1' : 'Yes',
+'rock_on' : 'No'
+}
+},
+medical : {
+html: '<p class="flow-question">:( You might still be a slut. Do you use birth control for other medical reasons?</p><img src="http://assets.motherjones.com/politics/2012/03/slut_flowchart_assets/SadKitty.jpg" />',
+connects: {
+'slut' : 'Yes',
+'kids_only' : 'No'
+}
+},
+kids_only : {
+html: '<p class="flow-question">Wait, so, sex only for the sake of having kids. No birth control. Nothing. <em>Really?</em></p><img src="http://assets.motherjones.com/politics/2012/03/slut_flowchart_assets/KidsHappy.jpg"/>',
+connects: {
+'slut' : 'No',
+'do_you_think' : 'Yes'
+}
+},
+do_you_think : {
+html: '<p>Do you think women who use birth control are sluts?</p><img src="http://assets.motherjones.com/politics/2012/03/slut_flowchart_assets/UpsideDownKitty.jpg"/>',
+connects: {
+'not_slut' : 'Yes',
+'slut' : 'No'
+}
+},
+not_slut : {
+html: '<p class="flow-question">Congrats! You\'re totally not a slut.<img src="http://assets.motherjones.com/politics/2012/03/slut_flowchart_assets/GroupCelebration.jpg"/>'
+}
+},
+{});
+});
+</script>
+</head>
+<body>
+<div style="clear:both" id="cyoa_container">&nbsp;</div>
+</body>
+</html>
