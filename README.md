@@ -13,10 +13,33 @@ In your web page:
 ```html
 <script src="jquery.js"></script>
 <script src="dist/cyoa.min.js"></script>
+<link href="../css/cyoa.css" rel="stylesheet" />
 <script>
 jQuery(function($) {
-  $.awesome(); // "awesome"
-});
+        $.cyoa({
+            start : {  // default start page, if you want to call it something different, you have to set it in the options
+                img: 'http://www.url/img.png',
+                connects: { 
+                    'page_2': 'Some text here',
+                    'death_by_water': 'The hanged man', 
+                    'foobarbaz' : 'variables'
+                }
+            },
+            page_2 : {
+                html: '<h1>Arbitrary html goes here !!! WhoooO!!!',
+                connects: {'death_by_water' : 'I hate fortune tellers'},
+            },
+            death_by_water : {
+                img: 'http://wasteland.org/fear.jpg',
+                select_img: 'http://placekitten.com/100/100' //optional
+            }
+        },
+        {
+            container: 'id of html element which holds the story',
+            start_page : 'optional, the key of the story page you start on, defaults to "start"'
+        }
+); // makes a wasteland story
+        });
 </script>
 ```
 
