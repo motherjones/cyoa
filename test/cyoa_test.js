@@ -38,4 +38,13 @@
   test('checks containing element can be set w/ option argument', 1, function() {
       equal(new $.Cyoa({}, {'container': 'test'}).container, 'test');
   });
+
+  test('attaching cyoa to object works too', 3, function() {
+      var elem = $('#qunit-fixture');
+      var returned_elem = elem.Cyoa({});
+      deepEqual(returned_elem, elem, 'The cyoa function called on an elem should return the elem');
+      equal(typeof(returned_elem.cyoa), 'object', 'The returned elem should have the cyoa object added to it');
+      elem.Cyoa({}, { 'start_page' : 'test'});
+      equal(elem.cyoa.start_page, 'test', 'Should be able to set options with this construction');
+  });
 }(jQuery));

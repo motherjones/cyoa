@@ -165,4 +165,11 @@
         };
         return cyoa.init(story, options);
     };
+
+    $.fn.Cyoa = function(story, options) {
+        options = options || {};
+        options.container = this.attr('id');
+        this.cyoa = $.Cyoa(story, options);
+        return this;
+    };
 }(jQuery));
