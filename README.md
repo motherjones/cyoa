@@ -2,6 +2,13 @@
 
 A choose your own adventure plugin for MotherJones
 
+## See it in action!
+The internets loved our <a href="http://motherjones.com/mojo/2012/03/flow-chart-are-you-slut">first implementation</a> of this container (trigger warning: cute kittens within).
+
+<a href="http://www.motherjones.com/politics/2012/05/citizens-united-amendment-flowchart">Here's an implementation</a> where the user walks through what it would take to overturn the landmark <em>Citizen United</em> campaign finance decision.
+
+Mother Jones' reporters made <a href="http://www.motherjones.com/politics/2012/06/romney-immigration-position-changes">this implementation</a> all by themselves, with almost zero help from our interactives team: it's a little game showing Mitt Romney's stance on immigration over time.
+
 ## Getting Started
 Download the [production version][min] or the [development version][max].
 
@@ -42,13 +49,6 @@ jQuery(function($) {
         });
 </script>
 ```
-
-## Examples
-The internets loved our <a href="http://motherjones.com/mojo/2012/03/flow-chart-are-you-slut">first implementation</a> of this container (trigger warning: cute kittens within).
-
-<a href="http://www.motherjones.com/politics/2012/05/citizens-united-amendment-flowchart">Here's an implementation</a> where the user walks through what it would take to overturn the landmark <em>Citizen United</em> campaign finance decision.
-
-Mother Jones' reporters made <a href="http://www.motherjones.com/politics/2012/06/romney-immigration-position-changes">this implementation</a> all by themselves, with almost zero help from our interactives team: it's a little game showing Mitt Romney's stance on immigration over time.
 
 ## Release History
 This is the first release!
