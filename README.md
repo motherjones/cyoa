@@ -47,7 +47,7 @@ jQuery(function($) {
 _(Coming soon)_
 
 ## Examples
-Example 1
+The internets loved our <a href="http://motherjones.com/mojo/2012/03/flow-chart-are-you-slut">first implementation</a> of this container (trigger warning: cute kittens within).
 
 ## Release History
 _(Nothing yet)_
