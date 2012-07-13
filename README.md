@@ -57,7 +57,7 @@ This is the first release!
 Copyright (c) 2012 Ben Breedlove  
 Licensed under the MIT, GPL licenses.
 
-## Contributing
+## Contributing (this is all totally optional)
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [grunt](https://github.com/cowboy/grunt).
 
 ### Important notes
