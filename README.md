@@ -1,6 +1,6 @@
 # MJ CYOA
 
-A choose your own adventure plugin for MotherJones
+A "Choose Your Own Adventure" plugin for interactive storytelling, from the apps team at Mother Jones.
 
 ## See it in action!
 The internets loved our <a href="http://motherjones.com/mojo/2012/03/flow-chart-are-you-slut">first implementation</a> of this container (trigger warning: cute kittens within).
