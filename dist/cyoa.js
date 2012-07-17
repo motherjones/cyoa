@@ -1,4 +1,4 @@
-/*! MJ CYOA - v0.1.0 - 2012-07-11
+/*! MJ CYOA - v0.1.0 - 2012-07-17
 * https://github.com/motherjones/cyoa
 * Copyright (c) 2012 Ben Breedlove; Licensed MIT, GPL */
 
@@ -25,6 +25,7 @@
                 }
                 that.add_to_path(that.start_page);
                 that.display_page(that.start_page);
+                return that;
             },
             create_cover : function() {
                 container_elem = $('#' + that.container);
@@ -107,6 +108,7 @@
                 //maybe fancy this up inna bit, have it slide or somethign
                 $('.cyoa_page').hide();
                 $('#' + page + '_container').show();
+                return that;
             },
             back : function() {
                 if ( path.length === 1 ) {
@@ -131,5 +133,12 @@
             }
         };
         return cyoa.init(story, options);
+    };
+
+    $.fn.Cyoa = function(story, options) {
+        options = options || {};
+        options.container = this.attr('id');
+        this.cyoa = $.Cyoa(story, options);
+        return this;
     };
 }(jQuery));
