@@ -26,15 +26,25 @@ jQuery(function($) {
         $.cyoa({
             start : {  // default start page, if you want to call it something different, you have to set it in the options
                 img: 'http://www.url/img.png',
-                connects: { 
-                    'page_2': 'Some text here',
-                    'death_by_water': 'The hanged man', 
-                    'foobarbaz' : 'variables'
-                }
+                connects: [ 
+                    { 'link' : 'page_2',
+                      'html' : 'Some text here'
+                    }, {
+                      'link' : 'death_by_water',
+                      'html' : 'The hanged man'
+                    }, {
+                      'link' : 'foobarbaz',
+                      'html' : 'variables'
+                    }
+                ]
             },
             page_2 : {
                 html: '<h1>Arbitrary html goes here !!! WhoooO!!!',
-                connects: {'death_by_water' : 'I hate fortune tellers'},
+                connects: [
+                    { 'link' : 'death_by_water',
+                      'html' : 'I hate fortune tellers'
+                    }
+                ]
             },
             death_by_water : {
                 img: 'http://wasteland.org/fear.jpg',

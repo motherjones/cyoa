@@ -1,4 +1,4 @@
-/*! MJ CYOA - v0.1.0 - 2012-07-17
+/*! MJ CYOA - v0.1.0 - 2012-08-03
 * https://github.com/motherjones/cyoa
 * Copyright (c) 2012 Ben Breedlove; Licensed MIT, GPL */
 
@@ -93,13 +93,13 @@
 
                 for ( var connect in choices ) {
                     var decision = choices[connect];
-                    if ( !story[connect] ) {
+                    if ( !story[decision.link] ) {
                         continue;
                     }
 
-                    var control = $('<li class="cyoa_controler_' + connect + '"></li>');
-                    control.append($('<span>' + decision + '</span>'));
-                    bind_control(connect, control);
+                    var control = $('<li class="cyoa_controler_' + decision.link + '"></li>');
+                    control.append($('<span>' + decision.html + '</span>'));
+                    bind_control(decision.link, control);
                     controler_container.append(control);
                 }
                 return controler_container;
