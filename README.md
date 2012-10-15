@@ -60,15 +60,20 @@ jQuery(function($) {
 </script>
 ```
 
-Alternately, connect to google spreadsheet.
+Alternately, you can use tabletop to connect to google spreadsheet and automatically write the JSON needed to power the CYOA.
 
 ```html
+<script src="jquery.js"></script>
+<script src="dist/cyoa.min.js"></script>
+<script src="tabletop.js"></script>
+<script>
     jQuery(function($) {
         $.cyoa(
             'the key to your published google spreadsheet',
             { separator: '|' }
         );
     });
+</script>
 ```
 
 Column headers for your google spreadsheet must be 
