@@ -60,6 +60,24 @@ jQuery(function($) {
 </script>
 ```
 
+Alternately, connect to google spreadsheet.
+
+```html
+    jQuery(function($) {
+        $.cyoa(
+            'the key to your published google spreadsheet',
+            { separator: '|' }
+        );
+    });
+```
+
+Column headers for your google spreadsheet must be 
+slug,    text,    connects to, connects text,   title,   background image,
+The connects to should be a | separated list of slugs which you want the page to connect to.
+The connets text should be a | separated list of what you want the connectors to read.
+If you like, you can designate a different character as the separator.
+Note that the order of the connects to and connects text must match.
+
 ## Release History
 This is the first release!
 
