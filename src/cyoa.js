@@ -27,8 +27,10 @@
             init : function(story, options) {
                 that = this;
                 that.story = story;
-                for ( var option in options ) {
-                    that[option] = options[option];
+                if (options) {
+                    for ( var option in options ) {
+                        that[option] = options[option];
+                    }
                 }
 
                 if (typeof(story) === 'string') {
@@ -60,7 +62,7 @@
             },
             make_story_data_from_spreadsheet_data: function(data) {
                 var story = {};
-                options.start_page = 'cyoa_page_' + that.clean_slug(data[0].slug);
+                that.start_page = 'cyoa_page_' + that.clean_slug(data[0].slug);
                 for (var i = 0; i < data.length; i++) {
                     var row = data[i];
                     var page = {}; 
