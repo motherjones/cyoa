@@ -103,8 +103,7 @@
     }
 
     .cyoa_show {
-        width: 625px;
-        margin-left: 3px;
+        width: 632px;
         -moz-transition: width 2s ease-in-out;
         -webkit-transition: width 2s ease-in-out;
         -o-transition: width 2s ease-in-out;
