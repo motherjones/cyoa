@@ -20,6 +20,7 @@
 #cyoa_container .cyoa_content  {margin-top: 0px;}
 
 #cyoa_container .cyoa_content p {
+    width: 625px;
     margin: 0px;
     font-size:1.8em;
     background: rgba(255,255,255,.6);
