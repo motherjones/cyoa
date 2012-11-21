@@ -77,10 +77,16 @@
                     + ( row.backgroundimage 
                             ? 'style="background-image: url(\'' + row.backgroundimage + '\');">' 
                             : '>' )
+                    + ( row.topimage 
+                            ? '<img src="' + row.topimage + '" class="topimage"></img>' 
+                            : ''  )
                     + ( row.title 
                             ? '<h1>' + row.title + '</h1>' 
                             : ''  )
                     + '<p>' + row.text + '</p>'
+                    + ( row.bottomimage 
+                            ? '<img src="' + row.bottomimage + '" class="topimage"></img>' 
+                            : ''  )
                     + '</div>';
             },
             clean_slug: function(slug) {
