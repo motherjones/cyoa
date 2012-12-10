@@ -83,9 +83,12 @@
                     + ( row.title 
                             ? '<h1>' + row.title + '</h1>' 
                             : ''  )
+                   	+ ( row.middleimage 
+		                    ? '<img src="' + row.middleimage + '" class="middleimage"></img>' 
+		                    : ''  )
                     + '<p>' + row.text + '</p>'
                     + ( row.bottomimage 
-                            ? '<img src="' + row.bottomimage + '" class="topimage"></img>' 
+                            ? '<img src="' + row.bottomimage + '" class="bottomimage"></img>' 
                             : ''  )
                     + '</div>';
             },
