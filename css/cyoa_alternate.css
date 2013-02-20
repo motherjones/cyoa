@@ -122,3 +122,24 @@
         color: #666;
     }
 
+@media (max-width: 480px) {
+	
+	#cyoa_container {
+	    background-image:url('http://assets.motherjones.com/interactives/templates/cyoa/cyoa-banner-mobile2.png');
+	}
+	
+	.cyoa_content div {
+		height: 320px;
+	}
+	
+	#cyoa_container li, #cyoa_container button {
+		margin-top: 0;
+		padding: 1em;
+	}
+	
+	.cyoa_show {
+		margin: 0, 0, -5px;
+	}
+	
+}
+
