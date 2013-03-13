@@ -29,6 +29,7 @@
     font-weight: bold;
     font-size: 15px;
     font-family: verdana;
+    background: rgba(255,255,255,0.5);
 }
 
 .cyoa_page {
@@ -41,7 +42,7 @@
     max-width: 632px; /* mojo width ( 632px ) - img width */
     list-style-type: none;
     padding: 0;
-    margin: 13px 0 0 0;
+    margin: 0 auto;
     text-align: center;
     cursor : pointer;
     clear: both;
@@ -49,10 +50,16 @@
 }
 .cyoa_controls li {
     float: left;
-    width: 276px;
     padding: 10px 20px;
     font-size: 24px;
     font-weight: bold;
+    background: #000;
+    color: white;
+    border-left: 1px solid #666;
+}
+
+.cyoa_controls li: hover {
+    background: #333;
 }
 
 .cyoa_controls li span{
@@ -61,23 +68,6 @@
 .disabled {
     color: grey;
 }
-.cyoa_top_controls {
-    margin: 4px;
-    height: 22px;
-    padding: 0;
-    text-indent: -9999px;
-    width: 22px;
-    border: none;
-}
-
-#cyoa_reset_button {
-    background: url("img/photoessay_control_sprite_20110714.png") no-repeat scroll 0 -4px transparent
-}
-
-#cyoa_back_button {
-    background: url("img/photoessay_control_sprite_20110714.png") no-repeat scroll -25px -4px transparent;
-}
-
 
 .cyoa_hide {
     display: none;
@@ -85,3 +75,18 @@
 .cyoa_show {
     display: block;
 }
+
+@media only screen and (max-width: 520px) {
+
+    .cyoa_controls li {
+        width: 100%;
+        float: none !important;
+        border-top: 1px solid #666 !important;
+        border-left: 0;
+        padding: 10px 0;
+
+    }
+
+}
+
+    </style>
