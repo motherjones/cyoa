@@ -23,7 +23,7 @@
             start_page : 'start',
             container : 'cyoa_container',
             separator : '|',
-            control_position: 'left',
+            control_position: 'split',
             init : function(story, options) {
                 that = this;
                 that.story = story;
@@ -69,25 +69,14 @@
                 }
                 return story;
             },
-            build_story_page_html_from_row: function(row) {
-                return '<div '
-                    + ( row.backgroundimage 
-                            ? 'style="background-image: url(\'' + row.backgroundimage + '\');">' 
-                            : '>' )
-                    + ( row.topimage 
-                            ? '<img src="' + row.topimage + '" class="topimage"></img>' 
-                            : ''  )
-                    + ( row.title 
+           build_story_page_html_from_row: function(row) {
+                return ( row.title 
                             ? '<h1>' + row.title + '</h1>' 
                             : ''  )
-                   	+ ( row.middleimage 
-		                    ? '<img src="' + row.middleimage + '" class="middleimage"></img>' 
-		                    : ''  )
                     + '<p>' + row.text + '</p>'
-                    + ( row.bottomimage 
-                            ? '<img src="' + row.bottomimage + '" class="bottomimage"></img>' 
-                            : ''  )
-                    + '</div>';
+                    +'<img src ='
+                    + (row.backgroundimage)
+                    + '>' ;
             },
             clean_slug: function(slug) {
                 return slug.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
@@ -165,6 +154,9 @@
                 }
                 if (that.control_position == 'right') {
                     controls_container.addClass('right');
+                }
+                if (that.control_position == 'left') {
+                    controls_container.addClass('left');
                 }
                 var choices = that.story[page].connects;
                 if ( !choices ) { //must be the end of a line
