@@ -168,9 +168,6 @@
                     controls_container.addClass('left');
                 }
                 var choices = that.story[page].connects;
-                if ( !choices ) { //must be the end of a line
-                    return controls_container;
-                }
                 var bind_control = function(choice, control) {
                     control.click(function() {
                         that.add_to_path(choice);
