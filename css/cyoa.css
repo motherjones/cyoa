@@ -1,27 +1,26 @@
-/* A stab at a mobile/responsive css
-/* inspired by Chris Coyier's flexslider, the text is positioned over the image
-/* becaues images resize better than background-images
-/* The width:100% + percentage selectors do most of the resizing, plus a few media queries
-/* for style. NB, to be fully responsive the slides must be wrapped in a responsive container
-/* and the meta viewport must be set in the doc head.
-*/
+/* A stab at a mobile/responsive css - keepin' it simple, we hope */
 
 .cyoa_container {
-    clear: both;
     width: 100%;
     /* set max-width here to contain slides. Mojo width is 632px */
     max-width: 632px;
     /*to center slideshow, if you like*/ 
     margin: 0 auto;
-    /*max-height + overflow makes keeps size continuity - n/m if you have all the same size
+    /*max-height + overflow makes keeps size continuity between slides - n/m if you have all the same size
     images*/
     margin: 1.25em auto;
-    padding: 1.25em 0;
+    padding: 0;
+    /*optional, a way to set borders/backgrounds, or just visualize the css...*/
+    background: #000;
+    clear: both;
 }
 
 .cyoa_content {
     text-align: center;
-    position: relative;
+    position: relative; /*set up for absolute positioning*/
+    /* if your images arent' the same height: do this to prevent different sizes from showing*/
+    max-height: 360px;
+    overflow: hidden;
 }
 .cyoa_content img {
     width: 100%; 
@@ -51,6 +50,7 @@
     cursor : pointer;
     clear: both;
     display: table;
+    background: #000;
 }
 
 ul.cyoa_controls.centered {
@@ -84,7 +84,11 @@ ul.cyoa_controls.centered {
     font-weight: bold;
     background: #000;
     color: white;
-    border-left: 1px solid #666;
+    border-right: 1px solid #666;
+}
+
+.cyoa_controls.split li#cyoa_back_button{
+   border-left: 1px solid #666;
 }
 
 .cyoa_controls li span{
@@ -111,10 +115,10 @@ ul.cyoa_controls.centered {
         float: none !important;
         border-top: 1px solid #666 !important;
         border-left: 0;
+        border-right: none;
         padding: 10px 0;
 
     }
 
 }
 
-    </style>

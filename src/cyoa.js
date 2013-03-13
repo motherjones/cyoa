@@ -10,6 +10,15 @@
  *
  */
 
+/* 
+ * A stab at a mobile/responsive version of the original slider
+ * inspired by Chris Coyier's flexslider, the text is positioned over the image
+ * because images resize way better than background-images.
+ * The width:100% on images + percentage selectors do most of the resizing, plus a few media queries
+ * for style. NB, to be fully responsive the slides must be wrapped in a responsive container
+ * and the meta viewport must be set in the doc head.
+*/
+
 (function($) {
 
     $.Cyoa = function(story, options) {
