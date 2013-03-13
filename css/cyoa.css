@@ -1,14 +1,19 @@
-/* A stab an responsive css*/
-/* inspired by Chris Coyier's flexslider, the text is positioned over the image*/
-/* becaues images resize better than background-images*/
+/* A stab at a mobile/responsive css
+/* inspired by Chris Coyier's flexslider, the text is positioned over the image
+/* becaues images resize better than background-images
+/* The width:100% + percentage selectors do most of the resizing, plus a few media queries
+/* for style. NB, to be fully responsive the slides must be wrapped in a responsive container.
+*/
 
 .cyoa_container {
     clear: both;
     width: 100%;
-    /* set max-width here, mojowidth is 632px */
+    /* set max-width here to contain slides. Mojo width is 632px */
     max-width: 632px;
-    /*to center, if you like*/ 
+    /*to center slideshow, if you like*/ 
     margin: 0 auto;
+    /*max-height + overflow makes keeps size continuity - n/m if you have all the same size
+    images*/
     margin: 1.25em auto;
     padding: 1.25em 0;
 }
