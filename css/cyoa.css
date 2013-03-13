@@ -1,13 +1,30 @@
+/* A stab an responsive css*/
+/* inspired by Chris Coyier's flexslider, the text is positioned over the image*/
+/* becaues images resize better than background-images*/
+
+.cyoa_container {
+    clear: both;
+    width: 100%;
+    /* set max-width here, mojowidth is 632px */
+    max-width: 632px;
+    /*to center, if you like*/ 
+    margin: 0 auto;
+    margin: 1.25em auto;
+    padding: 1.25em 0;
+}
+
 .cyoa_content {
-    /* something reasonable here about size, mojowidth is 632px */
-    width: 632px; 
     text-align: center;
+    position: relative;
 }
 .cyoa_content img {
-    height: 400px; 
+    width: 100%; 
 }
 
 .cyoa_page p {
+    position: absolute;
+    width: 96%;
+    padding: 2%;
     text-align: left;
     font-weight: bold;
     font-size: 15px;
@@ -15,11 +32,13 @@
 }
 
 .cyoa_page {
-    width: 632px; 
+    width: 100%;
+    max-width: 632px; 
 }
 
 .cyoa_controls {
-    width: 632px; /* mojo width ( 632px ) - img width */
+    width: 100%;
+    max-width: 632px; /* mojo width ( 632px ) - img width */
     list-style-type: none;
     padding: 0;
     margin: 13px 0 0 0;
@@ -58,14 +77,7 @@
 #cyoa_back_button {
     background: url("img/photoessay_control_sprite_20110714.png") no-repeat scroll -25px -4px transparent;
 }
-.cyoa_container {
-    width: 632px;
-    clear: both;
-    border-bottom: 1px solid #CCCCCC;
-    border-top: 1px solid #CCCCCC;
-    margin: 1.25em 0;
-    padding: 1.25em 0;
-}
+
 
 .cyoa_hide {
     display: none;
