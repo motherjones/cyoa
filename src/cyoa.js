@@ -23,6 +23,7 @@
             start_page : 'start',
             container : 'cyoa_container',
             separator : '|',
+            control_position: 'left',
             init : function(story, options) {
                 that = this;
                 that.story = story;
@@ -111,7 +112,7 @@
             },
             create_back_button_elem : function() {
                 back_button_elem = $('<li id="cyoa_back_button"' + 
-                    ' class="disabled" value="back">Back</li>'
+                    ' class="disabled generic" value="back">Back</li>'
                 );
                 back_button_elem.click(function(){that.back();});
                 back_button_elem.addClass('cyoa_top_controls');
@@ -119,7 +120,7 @@
             },
             create_reset_button_elem : function() {
                 reset_button_elem = $('<li id="cyoa_reset_button"' + 
-                    ' class="disabled" value="reset">Reset</li>'
+                    ' class="disabled generic" value="reset">Reset</li>'
                 );
                 reset_button_elem.click(function(){that.reset();});
                 reset_button_elem.addClass('cyoa_top_controls');
@@ -156,6 +157,15 @@
             },
             create_controls : function(page) {
                 var controls_container = $('<ul id="' + page + '_controls" class="cyoa_controls"></ul>');
+                if ( that.control_position == 'centered') {
+                    controls_container.addClass('centered');
+                }
+                if (that.control_position == 'split') {
+                    controls_container.addClass('split');
+                }
+                if (that.control_position == 'right') {
+                    controls_container.addClass('right');
+                }
                 var choices = that.story[page].connects;
                 if ( !choices ) { //must be the end of a line
                     return controls_container;
