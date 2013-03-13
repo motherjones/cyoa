@@ -2,7 +2,8 @@
 /* inspired by Chris Coyier's flexslider, the text is positioned over the image
 /* becaues images resize better than background-images
 /* The width:100% + percentage selectors do most of the resizing, plus a few media queries
-/* for style. NB, to be fully responsive the slides must be wrapped in a responsive container.
+/* for style. NB, to be fully responsive the slides must be wrapped in a responsive container
+/* and the meta viewport must be set in the doc head.
 */
 
 .cyoa_container {
@@ -43,8 +44,6 @@
 }
 
 .cyoa_controls {
-    width: 100%;
-    max-width: 632px; /* mojo width ( 632px ) - img width */
     list-style-type: none;
     padding: 0;
     margin: 0 auto;
@@ -53,6 +52,31 @@
     clear: both;
     display: table;
 }
+
+ul.cyoa_controls.centered {
+    margin: 0 auto;
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.cyoa_controls.split {
+    margin: 0;
+    display: inline;
+}
+
+.cyoa_controls.right {
+    float: right;
+}
+
+.cyoa_controls.left {
+    float: left;
+}
+
+.cyoa_controls.split li.generic {
+    float: right !important;
+}
+
 .cyoa_controls li {
     float: left;
     padding: 10px 20px;
@@ -61,10 +85,6 @@
     background: #000;
     color: white;
     border-left: 1px solid #666;
-}
-
-.cyoa_controls li: hover {
-    background: #333;
 }
 
 .cyoa_controls li span{
@@ -82,6 +102,9 @@
 }
 
 @media only screen and (max-width: 520px) {
+    .cyoa_controls {
+        width: 100%;
+    }
 
     .cyoa_controls li {
         width: 100%;
