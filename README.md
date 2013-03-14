@@ -14,7 +14,7 @@ You can see the result <a href="http://www.amandakrauss.com/cyoa_demos/cyoa_demo
 Inspired by Chris Coyier's <a href="https://github.com/woothemes/FlexSlider">Flexslider</a>, I decided to use an absolutely positioned paragraph over an image element, rather than a background image - which IMHO is not terribly inclined to be responsive. That's it. Two elements, in a box. You could generate more elements in the JS, if you wanted, and position them absolutely as well.
 
 ###NOTE
-Because you're using images and not background images, and because they're now responsive, you need to make sure all of them are of a *minimum* height - the overflow:hidden on the viewport will hide oversized images but if an image is short, it will make the entire container.
+Because you're using images and not background images, and because they're now responsive, you need to make sure all of them are of a *minimum* height - the overflow:hidden on the viewport will hide oversized images but if an image is short, it will make the entire container short.
 
 The decision-making controls (which turn into friendly menu-like buttons on mobile) were inspired by my tests with Zurb's responsive foundation as well as my previous work on reponsifying the Texas Tribune site. They're at the bottom because on mobile it won't ever make sense to have the answers before the questions.
 
@@ -40,7 +40,7 @@ You call the function in the head like so:
     });
 </script>
 ```
-The hardest part (I think) is that you need a source to tell the CYOA function what text, images, and choice to use. CYOA expects JSON for this. You can either build it into the script (see <a href="https://github.com/risatrix/cyoa/blob/master/demo/cyoa_demo.html">demo 1</a>) or feed in a Google spreadsheet via tabletop.js (see this < a href="http://www.mikeball.us/blog/using-google-spreadsheets-and-tabletop-js-as-a-web-application-back-end">excellent tutorial and <a href="https://github.com/risatrix/cyoa/blob/master/demo/cyoa_demo2.html">demo 2</a>). 
+The hardest part (I think) is that you need a source to tell the CYOA function what text, images, and choice to use. CYOA expects JSON for this. You can either build it into the script (see <a href="https://github.com/risatrix/cyoa/blob/master/demo/cyoa_demo.html">demo 1</a>) or feed in a Google spreadsheet via tabletop.js (see this <a href="http://www.mikeball.us/blog/using-google-spreadsheets-and-tabletop-js-as-a-web-application-back-end">excellent tutorial and <a href="https://github.com/risatrix/cyoa/blob/master/demo/cyoa_demo2.html">demo 2</a>). 
 
 When you make the function, you can also feed in your options; in addition to how you want to separate your info, you can choose how the controls appear the controls are 'left', 'right', 'centered', and 'split' like so:
 ```html
@@ -49,7 +49,7 @@ When you make the function, you can also feed in your options; in addition to ho
         $.cyoa(
             'the key to your published google spreadsheet',
             { separator: '|',
-              controls_position: 'centered'
+              control_position: 'centered'
         );
     });
 </script>
