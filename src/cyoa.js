@@ -10,6 +10,15 @@
  *
  */
 
+/* 
+ * A stab at a mobile/responsive version of the original slider
+ * inspired by Chris Coyier's flexslider, the text is positioned over the image
+ * because images resize way better than background-images.
+ * The width:100% on images + percentage selectors do most of the resizing, plus a few media queries
+ * for style. NB, to be fully responsive the slides must be wrapped in a responsive container
+ * and the meta viewport must be set in the doc head.
+*/
+
 (function($) {
 
     $.Cyoa = function(story, options) {
@@ -23,7 +32,7 @@
             start_page : 'start',
             container : 'cyoa_container',
             separator : '|',
-            control_location : 'top',
+            control_position: 'split',
             init : function(story, options) {
                 that = this;
                 that.story = story;
@@ -40,9 +49,6 @@
                 }
                     
                 that.create_cover();
-                if ( that.control_location === 'top' ) {
-                    container_elem.append(that.create_controls());
-                }
                 for ( var page in that.story ) {
                     that.create_page(page);
                 }
@@ -72,25 +78,14 @@
                 }
                 return story;
             },
-            build_story_page_html_from_row: function(row) {
-                return '<div '
-                    + ( row.backgroundimage 
-                            ? 'style="background-image: url(\'' + row.backgroundimage + '\');">' 
-                            : '>' )
-                    + ( row.topimage 
-                            ? '<img src="' + row.topimage + '" class="topimage"></img>' 
-                            : ''  )
-                    + ( row.title 
+           build_story_page_html_from_row: function(row) {
+                return ( row.title 
                             ? '<h1>' + row.title + '</h1>' 
                             : ''  )
-                   	+ ( row.middleimage 
-		                    ? '<img src="' + row.middleimage + '" class="middleimage"></img>' 
-		                    : ''  )
                     + '<p>' + row.text + '</p>'
-                    + ( row.bottomimage 
-                            ? '<img src="' + row.bottomimage + '" class="bottomimage"></img>' 
-                            : ''  )
-                    + '</div>';
+                    +'<img src ='
+                    + (row.backgroundimage)
+                    + '>' ;
             },
             clean_slug: function(slug) {
                 return slug.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
@@ -113,23 +108,17 @@
                 container_elem = $('#' + that.container);
                 container_elem.addClass('cyoa_container');
             },
-            create_controls : function() {
-                var control_container = jQuery('<div class="control_container">');
-                control_container.append(that.create_reset_button_elem());
-                control_container.append(that.create_back_button_elem());
-                return control_container;
-            },
             create_back_button_elem : function() {
-                back_button_elem = $('<button id="cyoa_back_button"' + 
-                    ' class="disabled" value="back">Back</button>'
+                back_button_elem = $('<li id="cyoa_back_button"' + 
+                    ' class="disabled generic" value="back">Back</li>'
                 );
                 back_button_elem.click(function(){that.back();});
                 back_button_elem.addClass('cyoa_top_controls');
                 return back_button_elem;
             },
             create_reset_button_elem : function() {
-                reset_button_elem = $('<button id="cyoa_reset_button"' + 
-                    ' class="disabled" value="reset">Reset</button>'
+                reset_button_elem = $('<li id="cyoa_reset_button"' + 
+                    ' class="disabled generic" value="reset">Reset</li>'
                 );
                 reset_button_elem.click(function(){that.reset();});
                 reset_button_elem.addClass('cyoa_top_controls');
@@ -138,9 +127,7 @@
             create_page : function(page) {
                 that.story[page].element = that.create_page_element(page); 
                 that.story[page].element.addClass('cyoa_hide');
-                if ( that.control_location === 'bottom' ) {
-                    that.story[page].element.append(that.create_controls());
-                }
+                that.story[page].element.append(that.create_controls(page));
                 container_elem.append(that.story[page].element);
             },
             create_page_element : function(page) {
@@ -157,7 +144,6 @@
                       '<div class="cyoa_content">' + 
                       content + '</div></div>'
                 );
-                element.append(that.create_selection_buttons(page));
                 return element;
             },
             add_to_path : function(page) {
@@ -167,12 +153,21 @@
                     reset_button_elem.removeClass('disabled');
                 }
             },
-            create_selection_buttons : function(page) {
-                var controler_container = $('<ul id="' + page + '_controls" class="cyoa_controls"></ul>');
-                var choices = that.story[page].connects;
-                if ( !choices ) { //must be the end of a line
-                    return controler_container;
+            create_controls : function(page) {
+                var controls_container = $('<ul id="' + page + '_controls" class="cyoa_controls"></ul>');
+                if ( that.control_position == 'centered') {
+                    controls_container.addClass('centered');
                 }
+                if (that.control_position == 'split') {
+                    controls_container.addClass('split');
+                }
+                if (that.control_position == 'right') {
+                    controls_container.addClass('right');
+                }
+                if (that.control_position == 'left') {
+                    controls_container.addClass('left');
+                }
+                var choices = that.story[page].connects;
                 var bind_control = function(choice, control) {
                     control.click(function() {
                         that.add_to_path(choice);
@@ -189,9 +184,11 @@
                     var control = $('<li class="cyoa_controler_' + decision.link + '"></li>');
                     control.append($('<span>' + decision.html + '</span>'));
                     bind_control(decision.link, control);
-                    controler_container.append(control);
+                    controls_container.append(control);
                 }
-                return controler_container;
+                controls_container.append(that.create_reset_button_elem());
+                controls_container.append(that.create_back_button_elem());
+                return controls_container;
             },
             display_page : function(page) {
                 //maybe fancy this up inna bit, have it slide or somethign
