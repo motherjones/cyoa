@@ -81,9 +81,11 @@ Alternately, you can use tabletop to connect to google spreadsheet and automatic
 Column headers for your google spreadsheet must be 
 slug,    text,    connects to, connects text,   title,   background image,
 The connects to should be a | separated list of slugs which you want the page to connect to.
-The connets text should be a | separated list of what you want the connectors to read.
+The connects text should be a | separated list of what you want the connectors to read.
 If you like, you can designate a different character as the separator.
 Note that the order of the connects to and connects text must match.
+
+Wow. That's a bit to take in, isn't it. Why not look at <a href="https://docs.google.com/spreadsheet/pub?key=0AswaDV9q95oZdHRQUlVQcDBJRU44NFdzc3lIeElkQXc&output=html">an example of a spreadsheet that feeds a cyoa</a>.
 
 When you make the function, you can also feed in your options; in addition to how you want to separate your info, you can choose how the controls appear the controls are 'left', 'right', 'centered', and 'split' like so:
 ```html
