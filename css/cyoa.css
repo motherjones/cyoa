@@ -1,18 +1,24 @@
 /* A stab at a mobile/responsive css - keepin' it simple, we hope */
 
-.cyoa_container {
+.cyoa_wrapper {
+    /*The easiest way to set a background that clears all the floats, center the thing etc.*/
+    background: black;
+    clear: both;
+    content: "";
     width: 100%;
     /* set max-width here to contain slides. Mojo width is 632px */
     max-width: 632px;
     /*to center slideshow, if you like*/ 
     margin: 0 auto;
+    /*Just in case*/
+    overflow: hidden;
+}
+
+.cyoa_container {
     /*max-height + overflow makes keeps size continuity between slides - n/m if you have all the same size
     images*/
     margin: 1.25em auto;
     padding: 0;
-    /*optional, a way to set borders/backgrounds, or just visualize the css...*/
-    background: #000;
-    clear: both;
 }
 
 .cyoa_content {
