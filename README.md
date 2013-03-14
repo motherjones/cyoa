@@ -9,7 +9,7 @@ The internets loved our <a href="http://motherjones.com/mojo/2012/03/flow-chart-
 
 Mother Jones' reporters made <a href="http://www.motherjones.com/politics/2012/06/romney-immigration-position-changes">this implementation</a> all by themselves, with almost zero help from our interactives team: it's a little game showing Mitt Romney's stance on immigration over time.
 
-I helped a Texas Tribune reporter make <a href="http://www.texastribune.org/library/data/interactive-should-texas-expand-medicaid/">this story</a> on Medicaid expansion; we'd recently made our site responsive so it seemed like a good idea to revamp the plugin from mobile-first standpoint.  
+I helped a Texas Tribune reporter make <a href="http://www.texastribune.org/library/data/interactive-should-texas-expand-medicaid/">this story</a> on Medicaid expansion; 
 
 ## Using CYOA To Tell Gripping Stories and/or Tales of Woe
 Download the [production version][min] or the [development version][max].
@@ -99,7 +99,7 @@ When you make the function, you can also feed in your options; in addition to ho
 ```
 
 ##Hey! This thing is responsive now!
-Thanks to our lovely friends over at the Texas Tribune.
+Yup. Huge thanks to our lovely friends over at the Texas Tribune.
 
 ###How It Works
 Inspired by Chris Coyier's <a href="https://github.com/woothemes/FlexSlider">Flexslider</a>, I decided to use an absolutely positioned paragraph over an image element, rather than a background image - which IMHO is not terribly inclined to be responsive. That's it. Two elements, in a box. You could generate more elements in the JS, if you wanted, and position them absolutely as well.
