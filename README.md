@@ -1,15 +1,18 @@
 # CYOA
 
 A "Choose Your Own Adventure" plugin for interactive storytelling, from the apps team at Mother Jones.
+Uses jQuery for easy placement.
+Uses TableTop so you can fill it using Google Spreadsheets (like <a href="https://docs.google.com/spreadsheet/pub?key=0AswaDV9q95oZdHRQUlVQcDBJRU44NFdzc3lIeElkQXc&output=html">this one</a>!) instead of writing JSON.
+Responsive, for displaying nicely on mobile screens.
 
-## See it in action!
-The internets loved our <a href="http://motherjones.com/mojo/2012/03/flow-chart-are-you-slut">first implementation</a> of this container (trigger warning: cute kittens within).
+## Demos
+The internets loved our <a href="http://motherjones.com/mojo/2012/03/flow-chart-are-you-slut">first use</a> of this container (trigger warning: cute kittens within).
 
-<a href="http://www.motherjones.com/politics/2012/05/citizens-united-amendment-flowchart">Here's an implementation</a> where the user walks through what it would take to overturn the landmark <em>Citizen United</em> campaign finance decision.
+<a href="http://www.motherjones.com/politics/2012/05/citizens-united-amendment-flowchart">Here's an example</a> where the user walks through what it would take to overturn the landmark <em>Citizen United</em> campaign finance decision.
 
-Mother Jones' reporters made <a href="http://www.motherjones.com/politics/2012/06/romney-immigration-position-changes">this implementation</a> all by themselves, with almost zero help from our interactives team: it's a little game showing Mitt Romney's stance on immigration over time.
+Mother Jones' reporters made <a href="http://www.motherjones.com/politics/2012/06/romney-immigration-position-changes">this story</a> all by themselves, with almost zero help from our interactives team: it's a little game showing Mitt Romney's stance on immigration over time.
 
-I helped a Texas Tribune reporter make <a href="http://www.texastribune.org/library/data/interactive-should-texas-expand-medicaid/">this story</a> on Medicaid expansion. 
+A Texas Tribune reporter used this to make <a href="http://www.texastribune.org/library/data/interactive-should-texas-expand-medicaid/">this story</a> on Medicaid expansion. 
 
 ## Using CYOA To Tell Gripping Stories and/or Tales of Woe
 Download the [production version][min] or the [development version][max].
@@ -89,7 +92,7 @@ Wow. That's a bit to take in, isn't it. Why not look at <a href="https://docs.go
 
 When you make the function, you can also feed in your options; in addition to how you want to separate your info, you can choose how the controls appear the controls are 'left', 'right', 'centered', and 'split' like so:
 ```html
-<script>s
+<script>
     jQuery(function($) {
         $.cyoa(
             'the key to your published google spreadsheet',
@@ -104,18 +107,16 @@ When you make the function, you can also feed in your options; in addition to ho
 Yup. Huge thanks to our lovely friends over at the Texas Tribune.
 
 ###How It Works
-Inspired by Chris Coyier's <a href="https://github.com/woothemes/FlexSlider">Flexslider</a>, I decided to use an absolutely positioned paragraph over an image element, rather than a background image - which IMHO is not terribly inclined to be responsive. That's it. Two elements, in a box. You could generate more elements in the JS, if you wanted, and position them absolutely as well.
+Inspired by Chris Coyier's <a href="https://github.com/woothemes/FlexSlider">Flexslider</a>, it uses an absolutely positioned paragraph over an image element, rather than a background image. That's it. Two elements, in a box. You could generate more elements in the JS, if you wanted, and position them absolutely as well.
 
 ###NOTE
 Because you're using images and not background images, and because they're now responsive, you need to make sure all of them are of a *minimum* height - the overflow:hidden on the viewport will hide oversized images but if an image is short, it will make the entire container short.
-
-The decision-making controls (which turn into friendly menu-like buttons on mobile) were inspired by my tests with Zurb's responsive foundation as well as my previous work on reponsifying the Texas Tribune site. They're at the bottom because on mobile it won't ever make sense to have the answers before the questions.
 
 ## Release History
 This is the first release!
 
 ## License
-Copyright (c) 2012 Ben Breedlove  
+Copyright (c) 2012 MotherJones
 Licensed under the MIT, GPL licenses.
 
 ## Contributing (this is all totally optional)
