@@ -41,11 +41,6 @@
     background: rgba(255,255,255,0.5);
 }
 
-.cyoa_page {
-    width: 100%;
-    max-width: 632px; 
-}
-
 .cyoa_controls {
     list-style-type: none;
     padding: 0;
@@ -127,6 +122,10 @@ ul.cyoa_controls.centered {
         padding: 10px 0;
 
     }
+
+     .cyoa_controls li:first-child {
+        border-top: 0 !important;
+     }
 
 }
 
