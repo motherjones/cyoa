@@ -1,4 +1,4 @@
-/*! MJ CYOA - v0.1.0 - 2013-03-14
+/*! MJ CYOA - v0.1.0 - 2013-04-10
 * https://github.com/motherjones/cyoa
 * Copyright (c) 2013 Ben Breedlove; Licensed MIT, GPL */
 
@@ -55,7 +55,8 @@
                         var story_data = that.make_story_data_from_spreadsheet_data(data);
                         that.init(story_data, options);
                     },
-                    simpleSheet: true
+                    simpleSheet: true,
+                    proxy: that.tabletop_proxy
                 });
             },
             make_story_data_from_spreadsheet_data: function(data) {

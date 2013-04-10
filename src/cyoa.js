@@ -63,7 +63,8 @@
                         var story_data = that.make_story_data_from_spreadsheet_data(data);
                         that.init(story_data, options);
                     },
-                    simpleSheet: true
+                    simpleSheet: true,
+                    proxy: that.tabletop_proxy
                 });
             },
             make_story_data_from_spreadsheet_data: function(data) {
