@@ -104,6 +104,9 @@ When you make the function, you can also feed in your options; in addition to ho
 </script>
 ```
 
+Hoping to sneak around Google's arbitrary rate limits? CYOA now supports a `tabletop_proxy` setting, which gets pased on to the Tabletop.init() call.
+
+
 ##Hey! This thing is responsive now!
 Yup. Huge thanks to our lovely friends over at the Texas Tribune.
 

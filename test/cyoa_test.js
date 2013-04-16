@@ -47,4 +47,8 @@
       elem.Cyoa({}, { 'start_page' : 'test'});
       equal(elem.cyoa.start_page, 'test', 'Should be able to set options with this construction');
   });
+
+  test('tabletop_proxy returns undefined when option does not exist', 1, function() {
+      equal(typeof(c1 = new $.Cyoa()['tabletop_proxy']), 'undefined', '`tabletop_proxy` is successfully undefined.');
+  });
 }(jQuery));
