@@ -10,9 +10,9 @@ A "Choose Your Own Adventure" plugin for interactive storytelling, from the apps
 
 [Is Your Vote in Danger? Take the Test](http://www.motherjones.com/politics/2012/10/flowchart-can-i-vote)
 
-The internets loved our <a href="http://motherjones.com/mojo/2012/03/flow-chart-are-you-slut">first use</a> of this container (trigger warning: cute kittens within).
+[Are You a Slut?](http://www.motherjones.com/mojo/2012/03/flow-chart-are-you-slut)
 
-Mother Jones' reporters made <a href="http://www.motherjones.com/politics/2012/06/romney-immigration-position-changes">this story</a> all by themselves, with almost zero help from our interactives team: it's a little game showing Mitt Romney's stance on immigration over time.
+[What's Mitt Romney's Stance on Immigration?](http://www.motherjones.com/politics/2012/06/romney-immigration-position-changes)
 
 A Texas Tribune reporter used this to make <a href="http://www.texastribune.org/library/data/interactive-should-texas-expand-medicaid/">this story</a> on Medicaid expansion. 
 
