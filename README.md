@@ -97,10 +97,8 @@ So long as you've set up
 
 Column headers for your google spreadsheet must be 
 slug,    text,    connects to, connects text,   title,   background image,
-The connects to should be a | separated list of slugs which you want the page to connect to.
-The connects text should be a | separated list of what you want the connectors to read.
-If you like, you can designate a different character as the separator.
-Note that the order of the connects to and connects text must match.
+The connects to should be a pipe-separated ( this is the  "|" under the delete key) list of slugs which you want the page to connect to. The connects text should also be a pipe-separated separated list of what you want the connectors to read.
+If you like, you can designate a different character as the separator. Note that the order of the connects to and connects text must match.
 
 Wow. That's a bit to take in, isn't it. Why not look at <a href="https://docs.google.com/spreadsheet/pub?key=0AswaDV9q95oZdHRQUlVQcDBJRU44NFdzc3lIeElkQXc&output=html">an example of a spreadsheet that feeds a cyoa</a>.
 
