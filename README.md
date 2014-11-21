@@ -5,6 +5,10 @@ A "Choose Your Own Adventure" plugin for interactive storytelling, from the apps
 * Uses TableTop 
 * Uses Google Spreadsheets <a href="https://docs.google.com/spreadsheet/pub?key=0AswaDV9q95oZdHRQUlVQcDBJRU44NFdzc3lIeElkQXc&output=html">like this one</a>
 * Responsive, for displaying nicely on mobile screens.
+* 
+<p align="center">
+  <img width="50%" src="" alt="screenshot"/>
+</p>
 
 ## Demos
 The internets loved our <a href="http://motherjones.com/mojo/2012/03/flow-chart-are-you-slut">first use</a> of this container (trigger warning: cute kittens within).
