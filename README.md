@@ -1,12 +1,8 @@
 # CYOA
 
-A "Choose Your Own Adventure" plugin for interactive storytelling, from the apps team at Mother Jones.
-* Uses jQuery for easy placement.
-* Uses TableTop 
-* Uses Google Spreadsheets <a href="https://docs.google.com/spreadsheet/pub?key=0AswaDV9q95oZdHRQUlVQcDBJRU44NFdzc3lIeElkQXc&output=html">like this one</a>
-* Responsive, for displaying nicely on mobile screens.
+A "Choose Your Own Adventure" plugin for interactive storytelling, from the apps team at Mother Jones, that uses Google Spreadsheets to drive a simple and fluid story telling experience.
 
-## Demos
+## Examples in the wild
 The internets loved our <a href="http://motherjones.com/mojo/2012/03/flow-chart-are-you-slut">first use</a> of this container (trigger warning: cute kittens within).
 
 <a href="http://www.motherjones.com/politics/2012/05/citizens-united-amendment-flowchart">Here's an example</a> where the user walks through what it would take to overturn the landmark <em>Citizen United</em> campaign finance decision.
