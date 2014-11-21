@@ -16,11 +16,9 @@ A "Choose Your Own Adventure" plugin for interactive storytelling, from the apps
 
 [Interactive Quiz: Should Texas Expand Medicaid?](http://www.texastribune.org/library/data/interactive-should-texas-expand-medicaid/)
 
-## Using CYOA To Tell Gripping Stories and/or Tales of Woe
-Download the [production version][min] or the [development version][max].
+## How it works
 
-[min]: https://raw.github.com/motherjones/cyoa/master/dist/cyoa.min.js
-[max]: https://raw.github.com/motherjones/cyoa/master/dist/cyoa.js
+*MoJo users:* Before you get started, follow [these instructions](https://github.com/motherjones/story-tools#starting-a-new-project).
 
 In your web page:
 
