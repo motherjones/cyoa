@@ -14,7 +14,7 @@ A "Choose Your Own Adventure" plugin for interactive storytelling, from the apps
 
 [What's Mitt Romney's Stance on Immigration?](http://www.motherjones.com/politics/2012/06/romney-immigration-position-changes)
 
-A Texas Tribune reporter used this to make <a href="http://www.texastribune.org/library/data/interactive-should-texas-expand-medicaid/">this story</a> on Medicaid expansion. 
+[Interactive Quiz: Should Texas Expand Medicaid?](http://www.texastribune.org/library/data/interactive-should-texas-expand-medicaid/)
 
 ## Using CYOA To Tell Gripping Stories and/or Tales of Woe
 Download the [production version][min] or the [development version][max].
