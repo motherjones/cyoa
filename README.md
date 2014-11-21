@@ -20,7 +20,16 @@ A "Choose Your Own Adventure" plugin for interactive storytelling, from the apps
 
 *MoJo users:* Before you get started, follow [these instructions](https://github.com/motherjones/story-tools#starting-a-new-project).
 
-In your web page:
+What this tool does is allows you to take a simple spreadsheet set up, populate with questions, answers, images and sourcing, and then let readers navigate their way through a story. Here's how you do it: 
+
+## Set up your Google Spreadsheet
+
+The setup is pretty straightforward. Here's what it will look like: 
+
+<p align="center">
+  <img width="50%" src="" alt="screenshot"/>
+</p>
+
 
 ```html
 <!DOCTYPE html>
