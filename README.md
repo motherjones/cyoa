@@ -1,12 +1,8 @@
 # CYOA
 
-A "Choose Your Own Adventure" plugin for interactive storytelling, from the apps team at Mother Jones.
-* Uses jQuery for easy placement.
-* Uses TableTop 
-* Uses Google Spreadsheets <a href="https://docs.google.com/spreadsheet/pub?key=0AswaDV9q95oZdHRQUlVQcDBJRU44NFdzc3lIeElkQXc&output=html">like this one</a>
-* Responsive, for displaying nicely on mobile screens.
+A "Choose Your Own Adventure" plugin for interactive storytelling, from the apps team at Mother Jones, that uses Google Spreadsheets to drive a simple and fluid story telling experience.
 
-## Demos
+## Examples in the wild
 The internets loved our <a href="http://motherjones.com/mojo/2012/03/flow-chart-are-you-slut">first use</a> of this container (trigger warning: cute kittens within).
 
 <a href="http://www.motherjones.com/politics/2012/05/citizens-united-amendment-flowchart">Here's an example</a> where the user walks through what it would take to overturn the landmark <em>Citizen United</em> campaign finance decision.
@@ -24,46 +20,31 @@ Download the [production version][min] or the [development version][max].
 In your web page:
 
 ```html
-<script src="jquery.js"></script>
-<script src="dist/cyoa.min.js"></script>
-<link href="../css/cyoa.css" rel="stylesheet" />
-<script>
-jQuery(function($) {
-        $.cyoa({
-            start : {  // default start page, if you want to call it something different, you have to set it in the options
-                img: 'http://www.url/img.png',
-                connects: [ 
-                    { 'link' : 'page_2',
-                      'html' : 'Some text here'
-                    }, {
-                      'link' : 'death_by_water',
-                      'html' : 'The hanged man'
-                    }, {
-                      'link' : 'foobarbaz',
-                      'html' : 'variables'
-                    }
-                ]
-            },
-            page_2 : {
-                html: '<h1>Arbitrary html goes here !!! WhoooO!!!',
-                connects: [
-                    { 'link' : 'death_by_water',
-                      'html' : 'I hate fortune tellers'
-                    }
-                ]
-            },
-            death_by_water : {
-                img: 'http://wasteland.org/fear.jpg',
-                select_img: 'http://placekitten.com/100/100' //optional
-            }
-        },
-        {
-            container: 'id of html element which holds the story',
-            start_page : 'optional, the key of the story page you start on, defaults to "start"'
-        }
-); // makes a wasteland story
-        });
-</script>
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link href="css/style.css" rel="stylesheet" />
+        <script src="js/jquery.js"></script>
+        <script src="js/tabletop.js"></script>
+        <script src="js/script.js"></script>      
+        <script type="text/javascript">
+            jQuery(document).ready(function() {
+                    // this pulls from the spreadsheet that can be found at https://docs.google.com/spreadsheet/pub?key=0AswaDV9q95oZdHRQUlVQcDBJRU44NFdzc3lIeElkQXc&output=html
+                var cyoa = jQuery.Cyoa('0AswaDV9q95oZdHRQUlVQcDBJRU44NFdzc3lIeElkQXc',
+                     { separator : ',',
+                    control_location: 'bottom'
+                    } 
+                );
+            });
+        </script>
+    </head>
+    <body>
+        <div class="cyoa_wrapper">
+        <div style="clear:both" id="cyoa_container"></div>
+    </div>
+    </body>
+</html>
 ```
 
 Alternately, you can use tabletop to connect to google spreadsheet and automatically write the JSON needed to power the CYOA.
