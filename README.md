@@ -2,6 +2,10 @@
 
 A "Choose Your Own Adventure" plugin for interactive storytelling, from the apps team at Mother Jones, that uses Google Spreadsheets to drive a simple and fluid story telling experience.
 
+<p align="center">
+  <img width="50%" src="https://github.com/motherjones/cyoa/blob/master/img/Screen%20Shot%202014-11-21%20at%2010.25.16%20AM.png" alt="screenshot"/>
+</p>
+
 ## Examples in the wild
 The internets loved our <a href="http://motherjones.com/mojo/2012/03/flow-chart-are-you-slut">first use</a> of this container (trigger warning: cute kittens within).
 
