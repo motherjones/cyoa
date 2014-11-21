@@ -24,7 +24,7 @@ Download the [production version][min] or the [development version][max].
 
 *MoJo users:* Before you get started, follow [these instructions](https://github.com/motherjones/story-tools#starting-a-new-project).
 
-In your web page:
+Here's the HTML you're going to need to drop into the Source view on your CMS:
 
 ```html
 <script src="jquery.js"></script>
