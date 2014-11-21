@@ -30,6 +30,25 @@ The setup is pretty straightforward. Here's what it will look like:
   <img width="50%" src="https://github.com/motherjones/cyoa/blob/master/img/Screen%20Shot%202014-11-21%20at%2011.43.58%20AM.png" alt="screenshot"/>
 </p>
 
+You can make a copy of [this template](https://docs.google.com/spreadsheet/pub?key=0AswaDV9q95oZdHRQUlVQcDBJRU44NFdzc3lIeElkQXc&output=html) and move the copy into the relevant beat folder in the Mother Jones Google Drive. Rename the spreadsheet as you see fit. Change the owner of the spreadsheet to MoJo Data in `Share > Advanced`.
+
+In order for the slider to be able to read your spreadsheet, you'll need to make your new spreadsheet public. Go to `File` and click on `Publish to the web,` then click on `Start publishing`. 
+
+A URL will appear. It will look something like this: 
+
+```
+https://docs.google.com/spreadsheet/pub?key=0AswaDV9q95oZdHRQUlVQcDBJRU44NFdzc3lIeElkQXc&output=html
+```
+
+Copy that link. This is your spreadsheet ID or url, which you will use to connect your spreadsheet to the slider. The part of that URL you'll really need is between the key= and the &.
+
+## Modify your project files
+
+*MoJo users:* By now you should have a local clone of this project repo on your machine. If you don't, go back and follow [these instructions](https://github.com/motherjones/story-tools#starting-a-new-project).
+
+**In your copy of index.html (required):**
+
+You're going to need to drop your key into line 12 of the index.html file (see below the line that starts "var cyoa = ...")
 
 ```html
 <!DOCTYPE html>
@@ -74,6 +93,7 @@ Alternately, you can use tabletop to connect to google spreadsheet and automatic
     });
 </script>
 ```
+So long as you've set up 
 
 Column headers for your google spreadsheet must be 
 slug,    text,    connects to, connects text,   title,   background image,
