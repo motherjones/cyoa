@@ -100,7 +100,7 @@ slug,    text,    connects to, connects text,   title,   background image,
 The connects to should be a pipe-separated ( this is the  "|" under the delete key) list of slugs which you want the page to connect to. The connects text should also be a pipe-separated separated list of what you want the connectors to read.
 If you like, you can designate a different character as the separator. Note that the order of the connects to and connects text must match.
 
-Wow. That's a bit to take in, isn't it. Why not look at <a href="https://docs.google.com/spreadsheet/pub?key=0AswaDV9q95oZdHRQUlVQcDBJRU44NFdzc3lIeElkQXc&output=html">an example of a spreadsheet that feeds a cyoa</a>.
+Wow. That's a bit to take in, isn't it. Here's [our original Google Spreadsheet](https://docs.google.com/spreadsheet/pub?key=0AswaDV9q95oZdHRQUlVQcDBJRU44NFdzc3lIeElkQXc&output=html) again so you can remind yourself what we're talking about here.
 
 When you make the function, you can also feed in your options; in addition to how you want to separate your info, you can choose how the controls appear the controls are 'left', 'right', 'centered', and 'split' like so:
 ```html
@@ -117,19 +117,12 @@ When you make the function, you can also feed in your options; in addition to ho
 
 Hoping to sneak around Google's arbitrary rate limits? CYOA now supports a `tabletop_proxy` setting, which gets pased on to the Tabletop.init() call.
 
-
-##Hey! This thing is responsive now!
-Yup. Huge thanks to our lovely friends over at the Texas Tribune.
-
-###How It Works
-Inspired by Chris Coyier's <a href="https://github.com/woothemes/FlexSlider">Flexslider</a>, it uses an absolutely positioned paragraph over an image element, rather than a background image. That's it. Two elements, in a box. You could generate more elements in the JS, if you wanted, and position them absolutely as well.
-
-###NOTE
+### NOTE
 Because you're using images and not background images, and because they're now responsive, you need to make sure all of them are of a *minimum* height - the overflow:hidden on the viewport will hide oversized images but if an image is short, it will make the entire container short.
 
-## Release History
-This is the first release!
+## Questions?
+
+Hit us up by email, or Twitter: [@jaeahjlee](https://twitter.com/jaeahjlee) or [@tasneemraja](https://twitter.com/tasneemraja)
 
 ## License
-Copyright (c) 2012 MotherJones
-Licensed under the MIT, GPL licenses.
+Copyright (c) 2012 Mother Jones
