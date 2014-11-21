@@ -16,7 +16,7 @@ Mother Jones' reporters made <a href="http://www.motherjones.com/politics/2012/0
 
 A Texas Tribune reporter used this to make <a href="http://www.texastribune.org/library/data/interactive-should-texas-expand-medicaid/">this story</a> on Medicaid expansion. 
 
-## Using CYOA To Tell Gripping Stories and/or Tales of Woe
+## How it works
 Download the [production version][min] or the [development version][max].
 
 [min]: https://raw.github.com/motherjones/cyoa/master/dist/cyoa.min.js
