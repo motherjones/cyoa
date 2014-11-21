@@ -7,7 +7,7 @@ A "Choose Your Own Adventure" plugin for interactive storytelling, from the apps
 * Responsive, for displaying nicely on mobile screens.
 * 
 <p align="center">
-  <img width="50%" src="" alt="screenshot"/>
+  <img width="50%" src="https://github.com/motherjones/cyoa/blob/master/img/Screen%20Shot%202014-11-20%20at%204.12.55%20PM.png" alt="screenshot"/>
 </p>
 
 ## Demos
