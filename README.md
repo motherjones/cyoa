@@ -22,6 +22,8 @@ Download the [production version][min] or the [development version][max].
 [min]: https://raw.github.com/motherjones/cyoa/master/dist/cyoa.min.js
 [max]: https://raw.github.com/motherjones/cyoa/master/dist/cyoa.js
 
+*MoJo users:* Before you get started, follow [these instructions](https://github.com/motherjones/story-tools#starting-a-new-project).
+
 In your web page:
 
 ```html
