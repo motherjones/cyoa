@@ -27,7 +27,7 @@ What this tool does is allows you to take a simple spreadsheet set up, populate 
 The setup is pretty straightforward. Here's what it will look like: 
 
 <p align="center">
-  <img width="50%" src="" alt="screenshot"/>
+  <img width="50%" src="https://github.com/motherjones/cyoa/blob/master/img/Screen%20Shot%202014-11-21%20at%2011.43.58%20AM.png" alt="screenshot"/>
 </p>
 
 
