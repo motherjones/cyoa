@@ -1,13 +1,12 @@
 # CYOA
 
-A "Choose Your Own Adventure" plugin for interactive storytelling, from the apps team at Mother Jones, that uses Google Spreadsheets <a href="https://docs.google.com/spreadsheet/pub?key=0AswaDV9q95oZdHRQUlVQcDBJRU44NFdzc3lIeElkQXc&output=html">like this one</a>
+A "Choose Your Own Adventure" plugin for interactive storytelling, from the apps team at Mother Jones.
+* Uses jQuery for easy placement.
+* Uses TableTop 
+* Uses Google Spreadsheets <a href="https://docs.google.com/spreadsheet/pub?key=0AswaDV9q95oZdHRQUlVQcDBJRU44NFdzc3lIeElkQXc&output=html">like this one</a>
+* Responsive, for displaying nicely on mobile screens.
 
-Take a look:
-<p align="center">
-  <img width="50%" src="https://github.com/motherjones/cyoa/blob/master/img/Screen%20Shot%202014-11-20%20at%204.12.55%20PM.png" alt="screenshot"/>
-</p>
-
-## Examples out in the wild
+## Demos
 The internets loved our <a href="http://motherjones.com/mojo/2012/03/flow-chart-are-you-slut">first use</a> of this container (trigger warning: cute kittens within).
 
 <a href="http://www.motherjones.com/politics/2012/05/citizens-united-amendment-flowchart">Here's an example</a> where the user walks through what it would take to overturn the landmark <em>Citizen United</em> campaign finance decision.
@@ -16,15 +15,13 @@ Mother Jones' reporters made <a href="http://www.motherjones.com/politics/2012/0
 
 A Texas Tribune reporter used this to make <a href="http://www.texastribune.org/library/data/interactive-should-texas-expand-medicaid/">this story</a> on Medicaid expansion. 
 
-## How it works
+## Using CYOA To Tell Gripping Stories and/or Tales of Woe
 Download the [production version][min] or the [development version][max].
 
 [min]: https://raw.github.com/motherjones/cyoa/master/dist/cyoa.min.js
 [max]: https://raw.github.com/motherjones/cyoa/master/dist/cyoa.js
 
-*MoJo users:* Before you get started, follow [these instructions](https://github.com/motherjones/story-tools#starting-a-new-project).
-
-Here's the HTML you're going to need to drop into the Source view on your CMS:
+In your web page:
 
 ```html
 <script src="jquery.js"></script>
@@ -110,8 +107,10 @@ When you make the function, you can also feed in your options; in addition to ho
 Hoping to sneak around Google's arbitrary rate limits? CYOA now supports a `tabletop_proxy` setting, which gets pased on to the Tabletop.init() call.
 
 
-### This is what's actually happening here
+##Hey! This thing is responsive now!
+Yup. Huge thanks to our lovely friends over at the Texas Tribune.
 
+###How It Works
 Inspired by Chris Coyier's <a href="https://github.com/woothemes/FlexSlider">Flexslider</a>, it uses an absolutely positioned paragraph over an image element, rather than a background image. That's it. Two elements, in a box. You could generate more elements in the JS, if you wanted, and position them absolutely as well.
 
 ###NOTE

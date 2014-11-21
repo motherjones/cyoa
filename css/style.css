@@ -1,0 +1,131 @@
+/* A stab at a mobile/responsive css - keepin' it simple, we hope */
+
+.cyoa_wrapper {
+    /*The easiest way to set colored background that clears all the floats, center the thing etc.*/
+    background: black;
+    clear: both;
+    content: "";
+    width: 100%;
+    /* set max-width here to contain slides. Mojo width is 632px */
+    max-width: 632px;
+    /*to center slideshow, if you like*/ 
+    margin: 0 auto;
+    /*Just in case*/
+    overflow: hidden;
+}
+
+.cyoa_container {
+    margin: 1.25em auto;
+    padding: 0;
+}
+
+.cyoa_content {
+    text-align: center;
+    position: relative; /*set up for absolute positioning*/
+    /* if your images aren't the same height, do this to prevent different sizes from showing*/
+    max-height: 360px;
+    overflow: hidden;
+}
+.cyoa_content img {
+    width: 100%; 
+}
+
+.cyoa_page p {
+    position: absolute;
+    width: 96%;
+    padding: 2%;
+    text-align: left;
+    font-weight: bold;
+    font-size: 15px;
+    font-family: verdana;
+    background: rgba(255,255,255,0.5);
+}
+
+.cyoa_controls {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+    cursor : pointer;
+    clear: both;
+    display: table;
+    background: #000;
+}
+
+ul.cyoa_controls.centered {
+    margin: 0 auto;
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.cyoa_controls.split {
+    margin: 0;
+    display: inline;
+}
+
+.cyoa_controls.right {
+    float: right;
+}
+
+.cyoa_controls.left {
+    float: left;
+}
+
+.cyoa_controls.split li.generic {
+    float: right !important;
+}
+
+.cyoa_controls li {
+    float: left;
+    padding: 10px 20px;
+    font-size: 24px;
+    font-weight: bold;
+    background: #000;
+    color: white;
+    border-right: 1px solid #666;
+    text-align: center;
+}
+
+.cyoa_controls.split li#cyoa_back_button{
+   border-left: 1px solid #666;
+}
+
+
+/*hover state for the buttons - add your brand here! */
+#cyoa_container li:hover {
+        background:red;
+}
+
+.disabled {
+    color: grey;
+}
+
+.cyoa_hide {
+    display: none;
+}
+.cyoa_show {
+    display: block;
+}
+
+@media only screen and (max-width: 520px) {
+    .cyoa_controls {
+        width: 100%;
+    }
+
+    .cyoa_controls li {
+        width: 100%;
+        float: none !important;
+        border-top: 1px solid #666 !important;
+        border-left: 0;
+        border-right: none;
+        padding: 10px 0;
+
+    }
+
+     .cyoa_controls li:first-child {
+        border-top: 0 !important;
+     }
+
+}
+

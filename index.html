@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link href="css/style.css" rel="stylesheet" />
+        <script src="js/jquery.js"></script>
+        <script src="js/tabletop.js"></script>
+        <script src="js/script.js"></script>      
+        <script type="text/javascript">
+            jQuery(document).ready(function() {
+                    // this pulls from the spreadsheet that can be found at https://docs.google.com/spreadsheet/pub?key=0AswaDV9q95oZdHRQUlVQcDBJRU44NFdzc3lIeElkQXc&output=html
+                var cyoa = jQuery.Cyoa('0AswaDV9q95oZdHRQUlVQcDBJRU44NFdzc3lIeElkQXc',
+                     { separator : ',',
+                    control_location: 'bottom'
+                    } 
+                );
+            });
+        </script>
+    </head>
+    <body>
+        <div class="cyoa_wrapper">
+        <div style="clear:both" id="cyoa_container"></div>
+    </div>
+    </body>
+</html>
