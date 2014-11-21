@@ -7,9 +7,10 @@ A "Choose Your Own Adventure" plugin for interactive storytelling, from the apps
 </p>
 
 ## Examples in the wild
-The internets loved our <a href="http://motherjones.com/mojo/2012/03/flow-chart-are-you-slut">first use</a> of this container (trigger warning: cute kittens within).
 
-<a href="http://www.motherjones.com/politics/2012/05/citizens-united-amendment-flowchart">Here's an example</a> where the user walks through what it would take to overturn the landmark <em>Citizen United</em> campaign finance decision.
+[Is Your Vote in Danger? Take the Test](http://www.motherjones.com/politics/2012/10/flowchart-can-i-vote)
+
+The internets loved our <a href="http://motherjones.com/mojo/2012/03/flow-chart-are-you-slut">first use</a> of this container (trigger warning: cute kittens within).
 
 Mother Jones' reporters made <a href="http://www.motherjones.com/politics/2012/06/romney-immigration-position-changes">this story</a> all by themselves, with almost zero help from our interactives team: it's a little game showing Mitt Romney's stance on immigration over time.
 
