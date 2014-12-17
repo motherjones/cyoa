@@ -16,6 +16,10 @@ A "Choose Your Own Adventure" plugin for interactive storytelling, from the apps
 
 [Interactive Quiz: Should Texas Expand Medicaid?](http://www.texastribune.org/library/data/interactive-should-texas-expand-medicaid/)
 
+[Want to Ditch Citizen's United? A DIY Guide](http://www.motherjones.com/politics/2012/05/citizens-united-amendment-flowchart)
+
+[Think You Can Beat the Immigration Maze?](http://www.motherjones.com/politics/2013/02/back-line-green-card-immigration-reform-quiz)
+
 ## How it works
 
 *MoJo users:* Before you get started, follow [these instructions](https://github.com/motherjones/story-tools#starting-a-new-project).
