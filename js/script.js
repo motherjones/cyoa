@@ -64,6 +64,7 @@
                         that.init(story_data, options);
                     },
                     simpleSheet: true,
+                    prettyColumnNames: false,
                     proxy: that.tabletop_proxy
                 });
             },
